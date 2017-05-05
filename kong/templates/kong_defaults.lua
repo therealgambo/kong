@@ -8,6 +8,7 @@ proxy_listen = 0.0.0.0:8000
 proxy_listen_ssl = 0.0.0.0:8443
 admin_listen = 0.0.0.0:8001
 admin_listen_ssl = 0.0.0.0:8444
+nginx_user = nobody nobody
 nginx_worker_processes = auto
 nginx_optimizations = on
 nginx_daemon = on
@@ -21,6 +22,9 @@ admin_ssl_cert_key = NONE
 upstream_keepalive = 60
 server_tokens = on
 latency_tokens = on
+real_ip_header = X-Real-IP
+real_ip_recursive = off
+trusted_ips = NONE
 
 database = postgres
 pg_host = 127.0.0.1
